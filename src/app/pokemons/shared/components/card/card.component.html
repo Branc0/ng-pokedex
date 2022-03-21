@@ -1,0 +1,14 @@
+<mat-card class="example-card">
+    <img
+        mat-card-image
+        [src]="pokemon.sprites.other.home.front_default"
+    >
+    <!-- <mat-card-subtitle>name</mat-card-subtitle> -->
+    <mat-card-title>{{pokemon.name}}</mat-card-title>
+    <!-- <mat-card-content>
+        <p>This card has divider and indeterminate progress as footer</p>
+    </mat-card-content> -->
+    <mat-card-footer *ngIf="loading">
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+</mat-card>

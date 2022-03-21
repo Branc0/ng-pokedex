@@ -1,0 +1,20 @@
+<header>
+    <mat-toolbar>
+        <span>Pokedex</span>
+    </mat-toolbar>
+</header>
+<main>
+    <div class="search-input">
+        <app-search-input #searchInput></app-search-input>
+    </div>
+    <div class="pokemon-container">
+        <ng-container *ngIf="pokemons$ | async as pokemons; else loading">
+            <ng-container *ngFor="let pokemon of pokemons">
+                <app-card [pokemon]="pokemon"></app-card>
+            </ng-container>
+        </ng-container>
+    </div>
+    <ng-template #loading>
+        loading ...
+    </ng-template>
+</main>

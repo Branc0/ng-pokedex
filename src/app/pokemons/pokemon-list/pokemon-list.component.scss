@@ -1,0 +1,25 @@
+.search-input {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.pokemon-container {
+    margin-top: 18px;
+    display: grid;
+    column-gap: 50px;
+    row-gap: 50px;
+    padding: 0 16px;
+    @media (min-width: 600px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 1000px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 1200px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @media (min-width: 1400px) {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
